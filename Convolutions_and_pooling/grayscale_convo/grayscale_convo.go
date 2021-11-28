@@ -168,6 +168,7 @@ func main() {
 	input := tensor.New(tensor.WithShape(50000, 28, 28), tensor.WithBacking(X_train))
 	// choose the picture, I picked 6th number (index 5)
 	img_pickd := PickImage(input, 0)
+	fmt.Printf("%#v", img_pickd)
 	// convert slice into a grayscale image
 	img := TensorViewToImage(img_pickd)
 	// save the imgByte to file
